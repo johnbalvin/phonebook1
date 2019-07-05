@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Book</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="me.js"></script>
+</head>
+<body>
+  <form class="search-form">
+    <input type="text" class="search" placeholder="Name, number or address">
+  </form>
+  <div id="phonebookWrapper">
+    <table id="phonebook">
+      <tbody data-sort="0">
+        <tr>
+            <th>
+              <div id="sortName" class="item" data-sort="0" data-sortme="0">
+                <span>Name</span>
+                <svg class="nameOrder" width="18" height="18" viewBox="0 0 32 32">
+                  <path d="M16 31l15-15h-9v-16h-12v16h-9z"/>
+                </svg>
+              </div> 
+            </th>
+            <th>
+              <div id="sortNumber" class="item" data-sort="0" data-sortme="1">
+                <span>Number</span>
+                <svg class="nameOrder" width="18" height="18" viewBox="0 0 32 32">
+                  <path d="M16 31l15-15h-9v-16h-12v16h-9z"/>
+                </svg>
+              </div>
+            </th> 
+            <th>
+              <div id="sortAddress" class="item" data-sort="0" data-sortme="2">
+                <span>Address</span>
+                <svg class="nameOrder" width="18" height="18" viewBox="0 0 32 32">
+                  <path d="M16 31l15-15h-9v-16h-12v16h-9z"/>
+                </svg>
+              </div>
+            </th>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+  </body>
+  <template id="tmplPhoneBook">
+    <tr class="contact">
+      <td class="name">John</td>
+      <td class="number">Doe</td>
+      <td class="addres">80</td>
+    </tr>
+  </template>
+</html>
