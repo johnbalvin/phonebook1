@@ -13,7 +13,7 @@ class PhoneBook{
         this.start();
     }
     start(){
-        const endpoint='https://us-central1-chat-245103.cloudfunctions.net/request?u=http://www.mocky.io/v2/581335f71000004204abaf83';
+        const endpoint='https://us-central1-johnbalvin.cloudfunctions.net/accescontrol?u=http://www.mocky.io/v2/581335f71000004204abaf83';
         fetch(endpoint,{method:"GET",mode:'cors'})
         .then(blob => {return blob.json();})
         .then(data => {

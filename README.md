@@ -1,6 +1,11 @@
 # Phonebook challenge
+## Usage 1
 
-## Usage
+1. Go to [https://storage.googleapis.com/johnbalvin/phonebook1/index.html](https://storage.googleapis.com/johnbalvin/phonebook1/index.html)
+2. Just type what you want to search
+3. In case of sorting, just click on Name, Number or address, the arrow's direction indicates it's order.
+
+## Usage 2
 
 1. Clone repository
 2. Open index.html in your browser
