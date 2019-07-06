@@ -60,7 +60,6 @@ class PhoneBook{
     }
     displayMatches() {
         let matchArray = this.findMatches(this.search.value, this.contacts);
-        let contactsInfo=this.sortBefore(matchArray);
         this.displayData(matchArray);
     }
     sortAfter(){
@@ -71,19 +70,19 @@ class PhoneBook{
         switch (this.me.dataset.sort){
             case "0":
                 if(this.sortName.dataset.sort=="0"){
-                  return contactsInfo.sort((a,b)=> a.name > b.name ? 1:-1);
+                  return contactsInfo.sort((a,b)=> a.name.toLowerCase() > b.name.toLowerCase() ? 1:-1);
                 }
                 return contactsInfo.sort((a,b)=> a.name < b.name ? 1:-1);
             case "1":
                 if(this.sortNumber.dataset.sort=="0"){
-                   return contactsInfo.sort((a,b)=> a.sortNumber > b.sortNumber ? 1:-1);
+                   return contactsInfo.sort((a,b)=> a.phone_number > b.phone_number ? 1:-1);
                 }
-                return contactsInfo.sort((a,b)=> a.sortNumber < b.sortNumber ? 1:-1);
+                return contactsInfo.sort((a,b)=> a.phone_number < b.phone_number ? 1:-1);
             case "2":
                 if(this.sortAddress.dataset.sort=="0"){
-                    return contactsInfo.sort((a,b)=> a.phone_number > b.phone_number ? 1:-1);
+                    return contactsInfo.sort((a,b)=> a.address.toLowerCase() > b.address.toLowerCase() ? 1:-1);
                 }
-                return contactsInfo.sort((a,b)=> a.phone_number < b.phone_number ? 1:-1);        
+                return contactsInfo.sort((a,b)=> a.address.toLowerCase() < b.address.toLowerCase() ? 1:-1);        
         }
     }
     displayData(contactsInfo){
